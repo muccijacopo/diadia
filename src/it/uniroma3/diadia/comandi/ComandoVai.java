@@ -11,21 +11,19 @@ public class ComandoVai extends AbstractComando {
 
 	@Override 
 	public String esegui(Partita partita) {
-	
-		if (this.direzione == null)
-			return "Dove vuoi andare ?";
-		else {
-			Stanza prossimaStanza = null;
-			prossimaStanza = partita.getLabirinto().getStanzaCorrente().getStanzaAdiacente(this.direzione);
-			if (prossimaStanza == null) {
-				return "Direzione inesistente";
-			}
-			else {
-				partita.getLabirinto().setStanzaCorrente(prossimaStanza);
-				partita.getGiocatore().setCfu(partita.getGiocatore().getCfu()-1);
-			}
-			return partita.getLabirinto().getStanzaCorrente().getDescrizione();
+		if (this.direzione == null) {
+			return "Dove vuoi andare?";
 		}
+		Stanza prossimaStanza = null;
+		prossimaStanza = partita.getLabirinto().getStanzaCorrente().getStanzaAdiacente(this.direzione);
+		if (prossimaStanza == null) {
+			return "Direzione inesistente!";
+		}
+		else {
+			partita.getLabirinto().setStanzaCorrente(prossimaStanza);
+			partita.getGiocatore().setCfu(partita.getGiocatore().getCfu()-1);
+		}
+		return partita.getLabirinto().getStanzaCorrente().getDescrizione();
 	}
 	
 	public void setParametro(String direzione) {

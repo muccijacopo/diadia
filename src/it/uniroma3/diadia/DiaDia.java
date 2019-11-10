@@ -45,8 +45,7 @@ public class DiaDia {
 	/**
 	 * Processa una istruzione
 	 *
-	 * @return true se l'istruzione e' eseguita e il gioco continua, falsev
-	 *         altrimenti
+	 * @return true se l'istruzione e' eseguita e il gioco continua, false altrimenti
 	 */
 	private boolean processaIstruzione(String istruzione) {
 		AbstractComando comandoDaEseguire;

@@ -6,8 +6,8 @@ public class ComandoGuarda extends AbstractComando {
 	@Override
 	public String esegui(Partita partita) {
 		StringBuilder risposta = new StringBuilder();
-		 risposta.append(partita.getLabirinto().getStanzaCorrente().getDescrizione());
-		risposta.append("CFU: " + partita.getGiocatore().getCfu());
+		risposta.append(partita.getLabirinto().getStanzaCorrente().getDescrizione());
+		risposta.append("Hai ancora " + partita.getGiocatore().getCfu() + " CFU \n");
 		risposta.append(partita.getGiocatore().getBorsa().toString());
 		
 		return risposta.toString();

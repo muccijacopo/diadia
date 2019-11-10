@@ -79,9 +79,9 @@ public class Borsa {
 		StringBuilder s = new StringBuilder();
 
 		if (!this.isEmpty()) {
-			s.append("Contenuto borsa ("+this.getPeso()+"kg/"+this.getPesoMax()+"kg): ");
+			s.append("Borsa(" + this.getPeso()+"kg/"+this.getPesoMax()+"kg): ");
 			for (Attrezzo a : attrezziOrdinati)
-				s.append(a.toString()+" ");
+				s.append(a.toString()+ " ");
 		}
 		else
 			s.append("Borsa vuota");

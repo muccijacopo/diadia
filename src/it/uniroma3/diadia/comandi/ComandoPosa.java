@@ -16,7 +16,7 @@ public class ComandoPosa extends AbstractComando {
 			Attrezzo attrezzo = partita.getGiocatore().prendiDallaBorsa(nomeAttrezzo);
 			if (attrezzo != null) {
 				stanzaCorrente.addAttrezzo(attrezzo);
-				return "Hai posato" + attrezzo.getNome();
+				return "Hai posato " + attrezzo.getNome();
 			}
 
 			else return "L'attrezzo non è nella borsa";

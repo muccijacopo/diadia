@@ -56,7 +56,7 @@ public class Stanza {
 	}
 	
 	/**
-	 * Restituisce la nome della stanza.
+	 * Restituisce il nome della stanza.
 	 * 
 	 * @return il nome della stanza
 	 */
@@ -102,13 +102,14 @@ public class Stanza {
 	 */
 	public String toString() {
 		StringBuilder risultato = new StringBuilder();
-		risultato.append("Ti trovi in: ");
-		risultato.append(this.nome);
-		risultato.append("\nUscite: ");
+		risultato.append("Ti trovi in ");
+		risultato.append(this.nome + "\n");
+		risultato.append("Uscite: ");
 		Set<String> direzioni = this.uscite.keySet();
 		for (String direzione : direzioni)
-			risultato.append(" " + direzione);
-		risultato.append("\nAttrezzi nella stanza: ");
+			risultato.append(direzione + " ");
+		risultato.append("\n");
+		risultato.append("Attrezzi nella stanza: ");
 		for (Attrezzo a : attrezzi) {
 			risultato.append(a.toString() + " ");
 		}
